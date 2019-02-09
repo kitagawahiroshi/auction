@@ -18,6 +18,16 @@ class ItemsController < ApplicationController
     redirect_to @item #商品ページに飛ばす
   end
 
+  def edit
+    @item = Item.find(params[:id]) #showアクションと同じ部分 サーバに登録済みならedit そうでないならcreateに自動的にわたしてくれる？
+  end
+
+  def update
+    @item = Item.find(params[:id]) #editと同じ
+    @item.update(item_params) #アップデートしてストロング？？で
+    redirect_to @item #リダイレクト
+  end
+
   private #プライベート
 
   def item_params

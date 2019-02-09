@@ -19,3 +19,7 @@
 </p>
 
 <%= image_tag @item.image_url %>
+
+<p>
+  <%= link_to "編集する",edit_item_path(@item)  %> <!-- @itemだけでOK、自動的に必要部分をとってきてくれる -->
+</p>
