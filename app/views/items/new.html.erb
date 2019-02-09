@@ -1,0 +1,27 @@
+<form action="/items" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="+B22g9KQtAE/t3qKSoTZeGzlAHyDcCVrGOzF5SSomRyalAujtTFcgBtjKYyNd0D/znEiUvWuQbDfdrC3XS/GXA==" />
+  <p>
+    商品名：<br>
+    <input type="text" name="item[name]" id="item_name" />
+  </p>
+  <p>
+    商品詳細：<br>
+    <textarea name="item[description]" id="item_description"></textarea>
+  </p>
+  <p>
+    価格：<br>
+    <input type="number" name="item[price]" id="item_price" />
+  </p>
+  <p>
+    出品者：<br>
+    <input type="text" name="item[seller]" id="item_seller" />
+  </p>
+  <p>
+    電子メール：<br>
+    <input type="text" name="item[email]" id="item_email" />
+  </p>
+  <p>
+    商品画像ＵＲＬ：<br>
+    <textarea name="item[image_url]" id="item_image_url"></textarea>
+  </p>
+  <input type="submit" name="commit" value="登録" />
+</form>
