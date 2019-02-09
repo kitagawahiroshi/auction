@@ -28,6 +28,12 @@ class ItemsController < ApplicationController
     redirect_to @item #リダイレクト
   end
 
+  def destroy
+    @item = Item.find(params[:id]) #editとかと同じ 削除する商品をとってくる
+    @item.destroy #とってきた商品を消す
+    redirect_to items_path #商品の一覧ページ(indexアクション)へ飛ぶ
+  end
+
   private #プライベート
 
   def item_params

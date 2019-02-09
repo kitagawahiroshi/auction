@@ -21,5 +21,6 @@
 <%= image_tag @item.image_url %>
 
 <p>
-  <%= link_to "編集する",edit_item_path(@item)  %> <!-- @itemだけでOK、自動的に必要部分をとってきてくれる -->
+  <%= link_to "編集",edit_item_path(@item)  %> <!-- @itemだけでOK、自動的に必要部分をとってきてくれる -->
+  <%= link_to "削除", item_path(@item), method: :delete, data: {confirm: '削除してよろしいですか？'} %>  <!-- @itemを指定して削除、カンファーム機能もいれる -->
 </p>
